@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  shadowsocks-client:
+    build: .
+    container_name: shadowsocks-client
+    ports:
+      - "127.0.0.1:51820:51820/udp"
+    environment:
+      - SS_PASSWORD=
+      - SS_SERVER_ADDR=
+      - SS_TUNNEL_ADDR=
